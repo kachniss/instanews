@@ -12,11 +12,6 @@ body {
 a {
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
-}
-
-header, footer {
-    flex-basis: 100%;
 }
 
 header {
@@ -30,7 +25,7 @@ header {
 }
 
 .header-small {
-    padding-top: 2rem;
+    padding: 1rem;
 }
 
 header select {
@@ -59,11 +54,12 @@ header p {
     outline: 0;
 }
 
-/* .loader {
-    height: 30rem;
-    width: 30rem;
-    background: url(../images/ajax-loader.gif) no-repeat center/15rem;
-} */
+.loader {
+    height: auto;
+    min-height: 20rem;
+    width: auto;
+    background: url(../images/ajax-loader.gif) no-repeat center/10rem;
+}
 
 .articles {
     display: flex;
@@ -100,43 +96,64 @@ footer {
     color: #c2c2c2;
 }
 
-/* .footer-select {
-    padding: 2rem;
-} */
-
-
 /*
 /*
 /* media query */
 @media screen and (min-width: 600px) {
     header {
-        align-self: center;
         flex-flow: nowrap;
-        justify-content: center;
-        align-items: center;
+    }
+
+    .header-small {
+        max-height: 10rem;
+    }
+
+    .header-small img {
+        max-width: 6rem;
+        margin-right: 5rem;
     }
 
     .logo, .selection {
-        flex-basis: 20%;
+        display: flex;
     }
 
+    .logo {
+        justify-content: flex-end;
+    }
+
+    .selection {
+        justify-content: flex-start;
+        flex-flow: row wrap;
+    }
+  
     .article {
         flex-basis: 33%;
     }
-
 }
 
 @media screen and (min-width: 1000px) {
+    body {
+        justify-content: flex-start;
+    }
+
     header {
         justify-content: flex-start;
     }
 
+    .header-small img {
+        margin-right: 2rem;
+    }
+
     .logo, .selection {
-        flex-basis: 25%;
+        flex-basis: 10%;
     }
 
     .logo {
         padding-left: 3rem;
+    }
+
+    .selection {
+        min-width: 10rem;
     }
 
     .article {
@@ -146,6 +163,7 @@ footer {
 
     footer {
         text-align: left;
-        padding-left: 5rem;
+        padding-left: 4rem;
+        width: 100%;
     }
 }
