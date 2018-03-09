@@ -29,6 +29,14 @@ header {
     flex-flow: row wrap;
 }
 
+.header-small {
+    padding-top: 2rem;
+}
+
+header select {
+    margin-bottom: 2rem;
+}
+
 .logo, .selection {
     flex-basis: 100%;
 }
@@ -37,14 +45,12 @@ header {
     margin: 1rem 0;
 }
 
-
 .selection {
     margin: auto;
 }
 
 header p {
     padding: 1rem 0;
-   
 }
 
 .category {
@@ -52,6 +58,12 @@ header p {
     width: 7rem;
     outline: 0;
 }
+
+/* .loader {
+    height: 30rem;
+    width: 30rem;
+    background: url(../images/ajax-loader.gif) no-repeat center/15rem;
+} */
 
 .articles {
     display: flex;
@@ -61,7 +73,6 @@ header p {
 
 .article {
     flex-basis: 100%;
-    background: url(../images/ajax-loader.gif) no-repeat center/15rem;
     display: inline-block;
     height: 30rem;
     position: relative;
@@ -75,18 +86,23 @@ header p {
 .article p {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     padding: 0.5rem;
 }
 
 footer {
     text-align: center;
     margin: auto;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
+    padding: 2rem;
     box-sizing: border-box;
     align-self: flex-end;
     color: #c2c2c2;
 }
+
+/* .footer-select {
+    padding: 2rem;
+} */
 
 
 /*
@@ -102,6 +118,10 @@ footer {
 
     .logo, .selection {
         flex-basis: 20%;
+    }
+
+    .article {
+        flex-basis: 33%;
     }
 
 }
@@ -120,18 +140,12 @@ footer {
     }
 
     .article {
-        flex-basis: 33%;
+        flex-basis: 25%;
+        background-size: 10rem;
     }
 
     footer {
         text-align: left;
         padding-left: 5rem;
-    }
-}
-
-@media screen and (min-width: 1240px) {
-    .article {
-        flex-basis: 25%;
-        background-size: 10rem;
     }
 }
