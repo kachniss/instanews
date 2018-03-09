@@ -1,0 +1,28 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "This is the InstaNews App project (Project 2) for RED Academy Web Development course 2018.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kachniss/instanews.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kachniss/instanews/issues"
+  },
+  "homepage": "https://github.com/kachniss/instanews#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-eslint": "^4.0.2"
+  }
+}

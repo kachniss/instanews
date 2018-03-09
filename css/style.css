@@ -9,6 +9,12 @@ body {
     height: 100vh;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
 header, footer {
     flex-basis: 100%;
 }
@@ -33,7 +39,7 @@ header {
 
 
 .selection {
-    text-align: left;
+    margin: auto;
 }
 
 header p {
@@ -45,6 +51,32 @@ header p {
     height: 1.5rem;
     width: 7rem;
     outline: 0;
+}
+
+.articles {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.article {
+    flex-basis: 100%;
+    background: url(../images/ajax-loader.gif) no-repeat center/15rem;
+    display: inline-block;
+    height: 30rem;
+    position: relative;
+}
+
+.article img {
+    width: 100%;
+    height: 30rem;
+}
+
+.article p {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
 }
 
 footer {
@@ -87,8 +119,19 @@ footer {
         padding-left: 3rem;
     }
 
+    .article {
+        flex-basis: 33%;
+    }
+
     footer {
         text-align: left;
         padding-left: 5rem;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .article {
+        flex-basis: 25%;
+        background-size: 10rem;
     }
 }
