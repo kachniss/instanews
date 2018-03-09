@@ -70,7 +70,7 @@ header p {
 .article {
     flex-basis: 100%;
     display: inline-block;
-    height: 30rem;
+    height: 20rem;
     position: relative;
 }
 
@@ -89,7 +89,6 @@ header p {
 footer {
     text-align: center;
     margin: auto;
-    /* padding-top: 1rem; */
     padding: 2rem;
     box-sizing: border-box;
     align-self: flex-end;
