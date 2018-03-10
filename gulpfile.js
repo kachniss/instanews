@@ -4,6 +4,11 @@ var uglify = require('gulp-uglify'),
 var browserSync = require('browser-sync').create();
 var eslint = require('gulp-eslint');
 
+var sass = require("gulp-sass"),
+  autoprefixer = require("gulp-autoprefixer"),
+  cssnano = require("gulp-cssnano"),
+  prettyError = require("gulp-prettyerror");
+
 gulp.task('scripts', function() {
   return gulp
     .src('./js/*.js') // What files do we want gulp to consume?
@@ -22,10 +27,10 @@ gulp.task('scripts', function() {
 // );
 
 gulp.task('watch', function() {
-    gulp.watch(['js/*.js', 'css/*.css', '*.html'] , ['lint', 'reload']);
+    gulp.watch(['js/*.js', 'sass/*.scss', '*.html'] , ['scripts', 'sass', 'lint', 'reload']);
  });
 
- gulp.task('reload', ['lint'], function() {
+ gulp.task('reload', ['scripts', 'sass', 'lint'], function() {
     browserSync.reload();
  });
  
@@ -45,4 +50,20 @@ gulp.task('lint', function() {
         .pipe(eslint.failAfterError());
 });
 
-gulp.task('default', ['scripts', 'browser-sync', 'watch', 'lint']);
+
+gulp.task("sass", function() {
+    return gulp
+      .src("./sass/style.scss")
+      .pipe(prettyError())
+      .pipe(sass())
+      .pipe(
+        autoprefixer({
+          browsers: ["last 2 versions"]
+        })
+      )
+      .pipe(cssnano())
+      .pipe(rename("style.min.css"))
+      .pipe(gulp.dest("./build/css"));
+  });
+
+gulp.task('default', ['scripts', 'sass', 'browser-sync', 'watch', 'lint']);

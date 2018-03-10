@@ -20,16 +20,15 @@ $(function(){
             url: url,
           }).done(function(data) {
               var articles = data.results;
-              var imageNumber = 0;
               for (var i = 0; i < articles.length; i++) {
                 // finding the best quality picture (if there is any)
-                if(articles[i].multimedia.length==5){
+                if(articles[i].multimedia.length === 5){
                     var image = articles[i].multimedia[4].url;
                     if (image&&(articlesLoad>0)) {
                         $(".articles").append("<a href='" + articles[i].url + "' class='article' style='background:url(" + image + ") no-repeat center/cover;'><li><p class='article-text'>" + articles[i].abstract + "</p></li></a>");
                         articlesLoad--;
                     }
-                    if (articlesLoad==0) {
+                    if (articlesLoad === 0) {
                         break;
                     }   
                 }       
