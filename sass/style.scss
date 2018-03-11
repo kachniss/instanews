@@ -1,7 +1,10 @@
-@import "_reset";
-@import "_fonts";
-@import "_variables";
-@import "_mixins";
+@import "settings/_reset";
+@import "settings/_fonts";
+@import "settings/_variables";
+@import "settings/_mixins";
+@import "partials/_header";
+@import "partials/_main";
+@import "partials/_footer";
 
 body {
     font-family: OpenSans, sans-serif;
@@ -21,143 +24,4 @@ body {
 a {
     color: $text-color;
     text-decoration: none;
-}
-
-header {
-    align-self: flex-start;
-    padding-top: 8 * $padding;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    flex-flow: row wrap;
-
-    @include tablet {
-        flex-flow: nowrap;
-    }
-
-    @include desktop {
-        flex-flow: nowrap;
-    }
-
-    select {
-        margin-bottom: 2 * $margin;
-    }
-
-    p {
-        padding: $padding 0;
-    }
-}
-
-.header-small {
-    padding: $padding;
-
-    @include tablet {
-        max-height: $dimension;
-    }
-
-    img {
-        @include tablet {
-            max-width: .6 * $dimension;
-            margin-right: 5 * $margin;
-        }
-        @include desktop {
-            justify-content: flex-start;
-        }  
-    }
-}
-
-.logo, .selection {
-    flex-basis: 100%;
-
-    @include tablet {
-        display: flex;
-    }
-    @include desktop {
-        flex-basis: 10%;
-    }
-}
-
-.logo {
-    margin: $margin 0;
-
-    @include tablet {
-        justify-content: flex-end;
-    }
-    @include desktop {
-        padding-left: 3 * $padding;
-    }
-}
-
-.selection {
-    margin: auto;
-
-    @include tablet {
-        justify-content: flex-start;
-        flex-flow: row wrap;
-    }
-    @include desktop {
-        min-width: $dimension;
-    }
-}
-
-.category {
-    height: 1.5rem;
-    width: 7rem;
-    outline: 0;
-}
-
-.loader {
-    height: auto;
-    min-height: 2 * $dimension;
-    width: auto;
-    background: url(../../images/ajax-loader.gif) no-repeat center/$dimension;
-}
-
-.articles {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-}
-
-.article {
-    flex-basis: 100%;
-    display: inline-block;
-    height: 3 * $dimension;
-    position: relative;
-
-    @include tablet {
-        flex-basis: 33%;
-    }
-    @include desktop {
-        flex-basis: 25%;
-        background-size: 10rem; 
-    }
-    
-    img {
-        width: 100%;
-        height: 3 * $dimension;
-    }
-
-    p {
-        position: absolute;
-        bottom: 0;
-        background: rgba($bg-color, 0.5);
-        padding: 0.5 * $padding;
-    }
-}
-
-footer {
-    text-align: center;
-    margin: auto;
-    padding: 2 * $padding;
-    box-sizing: border-box;
-    align-self: flex-end;
-    color: $footer-color;
-
-    @include desktop {
-        text-align: left;
-        padding-left: 4 * $padding;
-        width: 100%;
-    }
 }

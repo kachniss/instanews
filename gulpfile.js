@@ -9,7 +9,7 @@ var sass = require("gulp-sass"),
   cssnano = require("gulp-cssnano"),
   prettyError = require("gulp-prettyerror");
 
-gulp.task('scripts', function() {
+gulp.task('scripts', ['lint'], function() {
   return gulp
     .src('./js/*.js') // What files do we want gulp to consume?
     .pipe(uglify()) // Call the uglify function on these files
@@ -17,20 +17,11 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./build/js')); // Where do we put the result?
 });
 
-// gulp.task('scripts', gulp.series('lint', function() {
-//     return gulp
-//       .src('./js/*.js') // What files do we want gulp to consume?
-//       .pipe(uglify()) // Call the uglify function on these files
-//       .pipe(rename({ extname: '.min.js' })) // Rename the uglified file
-//       .pipe(gulp.dest('./build/js')); // Where do we put the result?
-//     })
-// );
-
 gulp.task('watch', function() {
-    gulp.watch(['js/*.js', 'sass/*.scss', '*.html'] , ['scripts', 'sass', 'lint', 'reload']);
+    gulp.watch(['js/*.js', 'sass/*.scss', '*.html'] , ['scripts', 'sass', 'reload']);
  });
 
- gulp.task('reload', ['scripts', 'sass', 'lint'], function() {
+ gulp.task('reload', ['scripts', 'sass'], function() {
     browserSync.reload();
  });
  

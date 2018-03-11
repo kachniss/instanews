@@ -1,0 +1,83 @@
+header {
+    align-self: flex-start;
+    padding-top: 8 * $padding;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow: row wrap;
+
+    @include tablet {
+        flex-flow: nowrap;
+    }
+
+    @include desktop {
+        flex-flow: nowrap;
+    }
+
+    select {
+        margin-bottom: 2 * $margin;
+    }
+
+    p {
+        padding: $padding 0;
+    }
+}
+
+.header-small {
+    padding: $padding;
+
+    @include tablet {
+        max-height: $dimension;
+    }
+
+    img {
+        @include tablet {
+            max-width: .6 * $dimension;
+            margin-right: 5 * $margin;
+        }
+        @include desktop {
+            justify-content: flex-start;
+        }  
+    }
+}
+
+.logo, .selection {
+    flex-basis: 100%;
+
+    @include tablet {
+        display: flex;
+    }
+    @include desktop {
+        flex-basis: 10%;
+    }
+}
+
+.logo {
+    margin: $margin 0;
+
+    @include tablet {
+        justify-content: flex-end;
+    }
+    @include desktop {
+        padding-left: 3 * $padding;
+    }
+}
+
+.selection {
+    margin: auto;
+
+    @include tablet {
+        justify-content: flex-start;
+        flex-flow: row wrap;
+    }
+    @include desktop {
+        min-width: $dimension;
+    }
+}
+
+.category {
+    height: 1.5rem;
+    width: 7rem;
+    outline: 0;
+}
