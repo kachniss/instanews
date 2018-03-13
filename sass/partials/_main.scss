@@ -25,19 +25,18 @@
         background-size: 10rem; 
     }
 
-    // &.hover + .article-text {
-    //     color: green;
-    // }
-    
-    img {
-        width: 100%;
-        height: 3 * $dimension;
+    &:hover .article-text {
+        opacity: 1;
     }
+}
 
-    p {
-        position: absolute;
-        bottom: 0;
-        background: rgba($bg-color, 0.5);
-        padding: 0.5 * $padding;
+.article-text {
+    @include tablet {
+        opacity: 0;
     }
+    position: absolute;
+    bottom: 0;
+    background: rgba($bg-color, 0.5);
+    padding: 0.5 * $padding;
+    transition: opacity 1s;
 }

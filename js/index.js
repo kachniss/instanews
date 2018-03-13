@@ -38,10 +38,6 @@ $(function(){
           });
     }
 
-    // @source https://stackoverflow.com/questions/35195842/do-an-event-only-on-element-clicked-same-class 03/10/2018
-    // @source https://stackoverflow.com/questions/28862497/onhover-wont-work-on-appended-elements  03/10/2018
-    // $('.articles').on('mouseenter mouseleave', '.article', function(){
-    //     // $(this).find('.article-text').fadeToggle("slow");   
-    //     $(this).toggleClass("hover");
-    // });
+    // Selectric initialization
+    $('.category').selectric();
 });

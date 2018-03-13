@@ -1,27 +1,8 @@
-@import "settings/_reset";
+@import "settings/reset";
 @import "settings/_fonts";
 @import "settings/_variables";
 @import "settings/_mixins";
+@import "settings/_general";
 @import "partials/_header";
 @import "partials/_main";
 @import "partials/_footer";
-
-body {
-    font-family: OpenSans, sans-serif;
-    font-size: 16px;
-    background: $bg-color;
-    color: $text-color;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    height: 100vh;
-
-    @include desktop {
-        justify-content: flex-start;
-    }
-}
-
-a {
-    color: $text-color;
-    text-decoration: none;
-}
