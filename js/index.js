@@ -20,7 +20,6 @@ $(function(){
             url: url,
           }).done(function(data) {
               var articles = data.results;
-              console.log(articles);
               for (var i = 0; i < articles.length; i++) {
                 // finding the best quality picture (if there is any)
                 if(articles[i].multimedia.length === 5){
@@ -41,4 +40,13 @@ $(function(){
 
     // Selectric initialization
     $('.category').selectric();
+
+    // touchscreen detection
+    // @source https://www.designedbyaturtle.co.uk/2015/how-to-detect-if-a-user-is-on-a-touch-screen-device-in-js/ 03/12/2018
+    function isTouchDevice() {
+        return 'ontouchstart' in document.documentElement;
+    }
+    if (isTouchDevice()) {
+        $(".article-text").css("opacity", "1");
+    }
 });
