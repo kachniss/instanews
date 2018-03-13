@@ -42,11 +42,8 @@ $(function(){
     $('.category').selectric();
 
     // touchscreen detection
-    // @source https://www.designedbyaturtle.co.uk/2015/how-to-detect-if-a-user-is-on-a-touch-screen-device-in-js/ 03/12/2018
-    function isTouchDevice() {
-        return 'ontouchstart' in document.documentElement;
-    }
-    if (isTouchDevice()) {
+    // @source https://codeburst.io/the-only-way-to-detect-touch-with-javascript-7791a3346685/ 03/12/2018
+    window.addEventListener('touchstart', function() {
         $(".article-text").css("opacity", "1");
-    }
+    });
 });
