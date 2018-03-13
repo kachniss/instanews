@@ -9,7 +9,7 @@ $(function(){
         $(".articles").empty();
         var section = $(".category").val();
         var apiKey = "1f73ed52c30d4864bb4d5b310aec39fc";
-        var url = "http://api.nytimes.com/svc/topstories/v2/" + section +".json?api-key=" + apiKey;
+        var url = "https://api.nytimes.com/svc/topstories/v2/" + section +".json?api-key=" + apiKey;
         callAjax(url);
     });
 
@@ -20,6 +20,7 @@ $(function(){
             url: url,
           }).done(function(data) {
               var articles = data.results;
+              console.log(articles);
               for (var i = 0; i < articles.length; i++) {
                 // finding the best quality picture (if there is any)
                 if(articles[i].multimedia.length === 5){

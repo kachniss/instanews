@@ -81,6 +81,7 @@ header {
 /* Selectric styles */
 .selectric {
     width: $dimension * .8;
+    margin: auto;
     height: 1.5rem;
     text-align: left;
     display: flex;
