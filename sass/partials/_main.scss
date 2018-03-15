@@ -36,5 +36,5 @@
     bottom: 0;
     background: rgba($bg-color, 0.5);
     padding: 0.5 * $padding;
-    transition: opacity 1s;
+    transition: opacity 1s ease-in-out;
 }

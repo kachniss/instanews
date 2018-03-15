@@ -6,6 +6,7 @@ header {
     justify-content: center;
     text-align: center;
     flex-flow: row wrap;
+    transition: padding-top 2s;
 
     @include tablet {
         flex-flow: nowrap;
@@ -86,7 +87,6 @@ header {
     text-align: left;
     display: flex;
     align-items: center;
-        // justify-content: center;
 
     .label {
         font-size: $selectic-font-size;
