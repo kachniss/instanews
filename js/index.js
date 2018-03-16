@@ -80,16 +80,15 @@ $(function(){
 
     //
     // search input function
+    // @source https://stackoverflow.com/questions/8747439/detecting-value-change-of-inputtype-text-in-jquery 03/15/2018
     //
-    $(".search").keypress(function(event) {
-        if(event.keyCode === 13) {
-            event.preventDefault();
-            getArticles();  
-        }
-    });
+    $(".search").on("change paste keyup", function() {
+        getArticles();  
+    })
 
-    $(".search").focus(function() {
-        $(this).val(""); 
+    $(".search").focusout(function() {
+        $(this).val("");
+        getArticles(); 
     });
 
     //
