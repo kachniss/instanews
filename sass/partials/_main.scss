@@ -1,3 +1,7 @@
+//
+// styles for articles
+//
+
 .loader {
     height: auto;
     min-height: 2 * $dimension;
@@ -16,6 +20,7 @@
     display: inline-block;
     height: 3 * $dimension;
     position: relative;
+    animation: article-animate 1s ease-in-out forwards;
 
     @include tablet {
         flex-basis: 33%;

@@ -1,4 +1,9 @@
+//
+// main SCSS file
+//
+
 @import "settings/reset";
+@import "settings/_animation";
 @import "settings/_fonts";
 @import "settings/_variables";
 @import "settings/_mixins";

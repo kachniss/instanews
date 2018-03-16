@@ -1,3 +1,7 @@
+//
+// styles for header
+//
+
 header {
     align-self: flex-start;
     padding-top: 8 * $padding;
@@ -6,7 +10,8 @@ header {
     justify-content: center;
     text-align: center;
     flex-flow: row wrap;
-    transition: padding-top 2s;
+    transition: padding-top 1s;
+    width: 100%;
 
     @include tablet {
         flex-flow: nowrap;
@@ -25,6 +30,7 @@ header {
     }
 }
 
+// header after articles are loaded
 .header-small {
     padding: $padding;
 
@@ -67,6 +73,9 @@ header {
 
 .selection {
     margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
     @include tablet {
         justify-content: flex-start;
@@ -74,16 +83,28 @@ header {
     }
     @include desktop {
         min-width: $dimension;
+        margin-left: 0;
+    }
+
+    p {
+        flex-basis: 100%;
+        @include tablet {
+            text-align: left;
+        } 
+    }
+
+    .category {
+        flex-basis: 100%;
     }
 }
 
-/*
-/*
-/* Selectric styles */
+//
+// Selectric styles
+//
 .selectric {
     width: $dimension * .8;
     margin: auto;
-    height: 1.5rem;
+    height: $selectric-dimension;
     text-align: left;
     display: flex;
     align-items: center;
@@ -117,4 +138,32 @@ header {
         height: $selectric-dimension;
         padding: $padding * .3;
     }
+}
+
+.search-bar {
+    display: none;
+    flex-basis: 100%;
+    align-self: center;
+    justify-content: center;
+
+    @include tablet {
+        justify-content: flex-end;
+    }
+
+    input {
+        height: $selectric-dimension;
+        width: $dimension * .8;
+        margin-top: $margin * 3;
+        background-color: #333745;
+        color: $text-color;
+        outline: 0; 
+        border-radius: $border-radius;
+        border: 0;
+        padding-left: $padding;
+
+        &:focus {
+            background-color: #282b36; 
+        }
+    }
+    
 }
