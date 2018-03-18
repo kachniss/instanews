@@ -83,7 +83,7 @@ header {
     }
     @include desktop {
         min-width: $dimension;
-        margin-left: 0;
+        margin-left: $margin * 3;
     }
 
     p {
@@ -162,9 +162,14 @@ header {
         padding-left: $padding;
         font-family: OpenSans;
 
-
         &:focus {
             background-color: #282b36; 
+        }
+
+        // disable clearing input in Edge
+        // @source https://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs 03/17/2018
+        &::-ms-clear {
+            display: none;
         }
     }
     

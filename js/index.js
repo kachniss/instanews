@@ -1,18 +1,19 @@
 //
 // MAIN JS FILE
 //
+
 $(function(){ 
     var articlesLoad = 12; // number of articles wanted
 
     //
-    //loading articles
+    // select field change
     // 
     $('.category').change(function(){
         getArticles();
     });
 
     //
-    // function for getting parameters before calling Ajax
+    // loading articles: function for getting parameters before calling Ajax 
     //
     function getArticles() {
         articlesLoad = 12;
@@ -57,7 +58,7 @@ $(function(){
               }
               // if no articles with search filter
               if (articlesLoad === 12) {
-                $(".articles").html("<p style='margin: auto'>Sorry, no article found.</p>");
+                $(".articles").html("<p class='no-article'>Sorry, no article found.</p>");
               }
               $(".articles").removeClass("loader");
           }).fail(function(error) {
@@ -82,13 +83,26 @@ $(function(){
     // search input function
     // @source https://stackoverflow.com/questions/8747439/detecting-value-change-of-inputtype-text-in-jquery 03/15/2018
     //
-    $(".search").on("change paste keyup", function() {
-        getArticles();  
-    })
+    var searchLength = $(".search").val().length;
 
-    $(".search").focusout(function() {
-        $(this).val("");
-        getArticles(); 
+    $(".search").on("keyup", function(event) {
+        var key = event.keyCode;
+        var newSearchLenght = $(this).val().length;
+        // alphanumeric input or backspace/delete which deletes a character
+        if ((key <= 90 &&  key >= 48) || (key === 8 && searchLength !== newSearchLenght) || (key === 46 && searchLength !== newSearchLenght)) {
+            getArticles();
+        }
+        searchLength = newSearchLenght;
+    });
+
+    $(".search").on("change paste", function() {
+        getArticles();
+    });
+
+    $(".search").keypress(function(event) {
+        if(event.keyCode === 13) {
+            event.preventDefault();
+        }
     });
 
     //

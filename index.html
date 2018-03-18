@@ -7,9 +7,6 @@
     <title>InstaNews App</title>
     <link rel="stylesheet" href="build/css/selectric.min.css">
     <link rel="stylesheet" href="build/css/style.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="build/js/selectric.min.js"></script>
-    <script src="build/js/index.min.js"></script>
     <base target="_blank">
 </head>
 <body>
@@ -20,7 +17,7 @@
         <div class="selection">
             <p>Choose a section:</p>
             <select class="category">
-                <option value="" selected disabled hidden>Sections...</option>
+                <option value="" selected disabled>Sections...</option>
                 <option value="home">Home</option>
                 <option value="arts">Arts</option>
                 <option value="books">Books</option>
@@ -42,10 +39,16 @@
             </form>
         </div>
     </header>
-    <ul class="articles">
-    </ul>
+    <main>
+        <ul class="articles">
+        </ul>
+    </main>    
     <footer>
-        <p>&copy; Copyright 2018 INSTANEWS</p>
+        <p>&copy; Copyright 2018 <span class="uppercase">instanews</span></p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="build/js/selectric.min.js"></script>
+    <script src="build/js/index.min.js"></script>
 </body>
 </html>

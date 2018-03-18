@@ -1,6 +1,10 @@
 //
-// styles for articles
+// styles for articles (main)
 //
+
+main {
+    width: 100%;
+}
 
 .loader {
     height: auto;
@@ -45,4 +49,8 @@
     width: 100%;
     text-align: justify;
     transition: opacity 1s ease-in-out;
+}
+
+.no-article {
+    margin: auto;
 }
