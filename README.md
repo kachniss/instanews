@@ -12,7 +12,7 @@ It is a one-page responsive app showing Top Stories articles from New York Times
 * Sass
 * Gulp for running tasks, minifying & compiling Sass files, lint
 * Ajax for fetching New York Times API
-* [Selectric](http://selectric.js.org){:target="_blank"} plugin for customizing the select field
+* [Selectric](http://selectric.js.org) plugin for customizing the select field
 
 ## License
 This project is licensed under the MIT License.
