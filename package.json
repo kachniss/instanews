@@ -27,6 +27,11 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
-    "gulp-eslint": "^4.0.2"
+    "autoprefixer": "^8.1.0",
+    "cssnano": "^3.10.0",
+    "eslint": "^4.19.0",
+    "gulp-eslint": "^4.0.2",
+    "rename": "^1.0.4",
+    "sass": "^1.0.0-rc.1"
   }
 }
