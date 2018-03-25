@@ -37,6 +37,12 @@ main {
     &:hover .article-text {
         opacity: 1;
     }
+
+    a {
+        display: block;
+        height: 3 * $dimension;
+        width: inherit;
+    }
 }
 
 .article-text {

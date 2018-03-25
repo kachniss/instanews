@@ -47,7 +47,7 @@ $(function(){
                         var containsTitle = isSubstring(articles[i].title, search);
                         // filter articles
                         if (!search || containsAbstract || containsTitle) {
-                            $(".articles").append("<a href='" + articles[i].url + "' class='article' style='background:url(" + image + ") no-repeat center/cover;'><li><p class='article-text'>" + articles[i].abstract + "</p></li></a>");
+                            $(".articles").append("<li class='article'><a href='" + articles[i].url + "' style='background:url(" + image + ") no-repeat center/cover;'><p class='article-text'>" + articles[i].abstract + "</p></a></li>");
                             articlesLoad--;
                         }  
                     }
