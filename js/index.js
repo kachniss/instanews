@@ -3,8 +3,8 @@
 //
 
 $(function(){ 
-    var articlesLoad = 12; // number of articles wanted
-
+    var initialArticlesLoad = 12; // number of articles wanted
+    var articlesLoad = null;
     //
     // select field change
     // 
@@ -16,7 +16,7 @@ $(function(){
     // loading articles: function for getting parameters before calling Ajax 
     //
     function getArticles() {
-        articlesLoad = 12;
+        articlesLoad = initialArticlesLoad;
         $(".articles").addClass("loader");
         $("header").addClass("header-small");
         $("footer").addClass("footer-small");
