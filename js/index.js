@@ -87,12 +87,12 @@ $(() => {
 
     $(".search").on("keyup", (event) => {
         let key = event.keyCode;
-        let newSearchLenght = $(".search").val().length;
+        let newSearchLength = $(".search").val().length;
         // alphanumeric input or backspace/delete which deletes a character
-        if ((key <= 90 &&  key >= 48) || (key === 8 && searchLength !== newSearchLenght) || (key === 46 && searchLength !== newSearchLenght)) {
+        if ((key <= 90 &&  key >= 48) || (key === 8 && searchLength !== newSearchLength) || (key === 46 && searchLength !== newSearchLength)) {
             getArticles();
         }
-        searchLength = newSearchLenght;
+        searchLength = newSearchLength;
     });
 
     $(".search").on("change paste", () => getArticles());
