@@ -4,6 +4,9 @@ This is the InstaNews App project (Project 2) for RED Academy Web Development co
 
 It is a one-page responsive app showing Top Stories articles from New York Times API. User has a choice of seeing articles from different sections as well as filtering articles using keywords.
 
+## Website
+* [GitHub Page](https://kachniss.github.io/instanews/)
+
 ## Author
 * Katerina Vopalkova
 

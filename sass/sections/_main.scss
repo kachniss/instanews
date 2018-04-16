@@ -10,7 +10,7 @@ main {
     height: auto;
     min-height: 2 * $dimension;
     width: auto;
-    background: url(../../images/ajax-loader.gif) no-repeat center/$dimension;
+    background: url(../public/images/ajax-loader.gif) no-repeat center/$dimension;
 }
 
 .articles {
