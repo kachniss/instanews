@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/kachniss/instanews#readme",
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
@@ -28,8 +30,10 @@
   },
   "dependencies": {
     "autoprefixer": "^8.1.0",
+    "babel-core": "^6.26.0",
     "cssnano": "^3.10.0",
     "eslint": "^4.19.0",
+    "gulp-babel": "^7.0.1",
     "gulp-eslint": "^4.0.2",
     "rename": "^1.0.4",
     "sass": "^1.0.0-rc.1"
