@@ -5,6 +5,9 @@ This is the InstaNews App project (Project 2) for RED Academy Web Development co
 It is a one-page responsive app showing Top Stories articles from New York Times API. User has a choice of seeing articles from different sections as well as filtering articles using keywords.
 
 ## Website
+
+![Instanews Screenshot](https://github.com/kachniss/kachniss-portfolio/blob/master/public/images/screenshots/instanews-1.jpg "This is a screenshot of the Instanews Project")
+
 * [GitHub Page](https://kachniss.github.io/instanews/)
 
 ## Author
@@ -18,4 +21,4 @@ It is a one-page responsive app showing Top Stories articles from New York Times
 * [Selectric](http://selectric.js.org) plugin for customizing the select field
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the GPL License.
